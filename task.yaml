@@ -1,0 +1,6 @@
+Music catalog:
+      Index: Show Categories list and 5 last tracks by creation date
+      Categories: Display list of music categories, display category with related tracks by id
+      Tracks: Show list of all tracks, Show track info by id with commets
+      Comments: Allow to create comment to track
+      Page: Static Page Controller – showing static pages (about us, contact form, 1 simple page)
