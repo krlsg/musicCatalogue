@@ -2,15 +2,15 @@
 include_once 'header.php';
 ?>
 
-<html>
+<!--<html>-->
+<!---->
+<!--    <head>-->
+<!--        <meta charset="UTF-8">-->
+<!--        <title>Comments</title>-->
+<!--        <link rel="stylesheet" type="text/css" href="style.css" />-->
+<!--    </head>-->
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Comments</title>
-        <link rel="stylesheet" type="text/css" href="style.css" />
-    </head>
-
-    <body>
+<!--    <body>-->
         <h1 align="center">Comments<H1>
 
         <center/>
@@ -18,6 +18,6 @@ include_once 'header.php';
         <center/>
         <textarea rows="10" cols="90"></textarea>
         <input type="submit" value="Submit">
-    </body>
-
-</html>
+<!--    </body>-->
+<!---->
+<!--</html>-->

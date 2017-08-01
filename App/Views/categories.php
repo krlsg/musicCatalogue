@@ -1,3 +1,7 @@
+<?php
+include_once 'header.php';
+?>
+
 <html>
 
     <head>
@@ -11,8 +15,8 @@
         <a class="blog-nav-item active" href="index.html">Home</a>
         <a class="blog-nav-item" href="Categories.html">Categories</a>
         <a class="blog-nav-item" href="Tracks.html">Tracks</a>
-        <a class="blog-nav-item" href="comments.php">Comments</a>
-        <a class="blog-nav-item" href="about.html">About</a>
+        <a class="blog-nav-item" href="../comments.php">Comments</a>
+        <a class="blog-nav-item" href="about.php">About</a>
         <a class="blog-nav-item" href="contacts.php">Contact Us</a>
         </nav>
     </div>
