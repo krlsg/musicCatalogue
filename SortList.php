@@ -12,7 +12,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT title, author, created_at FROM track";
+$sql = "SELECT * FROM track";
 $result = mysqli_query($conn, $sql);
 
 $rowCount = mysqli_num_rows($result);
@@ -61,3 +61,17 @@ $searchKey = 'Dance track';
 //User input songName; bigArray is fetched from the database
 $songName = searchTitle($searchKey, $middleman);
 var_dump($songName);
+
+//User inputs his name; comment e.g:
+$user = 'Qseo'; // User input;
+$comment = 'Something to say'; // User input;
+//Need to identify song
+$track_id = 3;
+$sql = "INSERT INTO comments (track_id, author, body, created_at)
+VALUES ($track_id, $user, $comment, CURRENT_TIMESTAMP )";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
