@@ -2,7 +2,7 @@
 
 `brew install mariadb` - from console, install DB
 
-`mysql.restart` - start mysql as service
+`mysql.server restart` - start mysql as service
 
 `mysql -u root` - login to dabase
 
