@@ -1,0 +1,13 @@
+{
+    "name": "student/music-catalogue",
+    "authors": [
+        {
+            "name": "AmazingKapableMen",
+            "email": "amazingkapablemen@akm.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": { "musicCatalogue\\": "App/" }
+    }
+}
