@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'header.php';
 ?>
         <center>
@@ -69,6 +69,6 @@ include_once 'header.php';
             </table>
         </div>
 
-<?
+<?php
 include_once 'footer.php';
 ?>
