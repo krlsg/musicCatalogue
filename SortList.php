@@ -57,11 +57,14 @@ function searchTitle($songName, $array) {
     return null;
 }
 //User inputs
-$searchKey = 'Dance track';
+$searchKey = 'Lullaby_of_birdland';
 //User input songName; bigArray is fetched from the database
 $songName = searchTitle($searchKey, $middleman);
 var_dump($songName);
 
+
+//Creating a comment in the database
+/*
 //User inputs his name; comment e.g:
 $user = "Qseo"; // User input;
 $comment = "Something new?"; // User input;
@@ -76,6 +79,9 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+*/
+
+
 //Populatng track table with random values
 /*
     function generateRandomString($length)
