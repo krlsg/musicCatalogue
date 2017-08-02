@@ -7,18 +7,18 @@
  */
 
 namespace musicCatalogue\Controller;
-use musicCatalogue\Model\CategoriesModel;
-use musicCatalogue\View\CategoriesView;
+use musicCatalogue\Model\TracksModel;
+use musicCatalogue\View\TracksView;
 
 
-class Categories
+class Tracks
 {
     public function getDisplay(){
 
-        $model = new CategoriesModel();
+        $model = new TracksModel();
         $pageData = $model->getPageData();
 
-        $route = new CategoriesView();
+        $route = new TracksView();
         $display = $route->render($pageData);
 
         return $display;

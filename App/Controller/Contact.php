@@ -11,7 +11,11 @@ namespace musicCatalogue\Controller;
 
 class Contact
 {
-    public function display(){
-        echo 'Display the page';
+    public function getDisplay(){
+
+        $route = new ContactView();
+        $display = $route->render();
+
+        return $display;
     }
 }
