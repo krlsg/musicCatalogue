@@ -17,6 +17,5 @@ $req = [
 
 var_dump($req);
 
-
 $route = new Router();
 $response = $route->handle($req);
