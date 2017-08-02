@@ -14,7 +14,7 @@ class HomeTemp
     public function getHome($pageData) {
         echo '
         
-<div>
+<div align="center" style="overflow-y: scroll; height:550px;">
 <div class="search">
     <h1>Search a track</h1>
 

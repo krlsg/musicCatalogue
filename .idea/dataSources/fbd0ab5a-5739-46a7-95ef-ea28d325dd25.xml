@@ -63,8 +63,9 @@
     </column>
     <column id="19" parent="8" name="created_at">
       <Position>5</Position>
-      <DataType>datetime|0</DataType>
-      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;current_timestamp()&apos;</DefaultExpression>
     </column>
     <key id="20" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -103,7 +104,12 @@
       <DataType>datetime|0</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
     </column>
-    <key id="27" parent="9" name="PRIMARY">
+    <column id="27" parent="9" name="youtube_link">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <key id="28" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>track_id</ColNames>
       <Primary>1</Primary>

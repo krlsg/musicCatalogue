@@ -7,34 +7,53 @@
  */
 
 namespace musicCatalogue;
+
 use musicCatalogue\Controller\Home;
 use musicCatalogue\Controller\Categories;
 use musicCatalogue\Controller\Results;
 use musicCatalogue\Controller\Tracks;
 use musicCatalogue\Controller\About;
 use musicCatalogue\Controller\Contact;
+use musicCatalogue\Controller\Player;
 
 
 class Router
 {
     private $method;
     private $uri;
+    protected $player_id;
 
     public function getHandled(array $req)
     {
         $method = $req[0];
         $uri = $req[1];
+        $player_id = $req[2];
 
-        if($method === 'GET' && $uri != '/'){
+        //var_dump($player_id);
+
+        if ($player_id != null) {
+
+            $selectPage = new Router();
+            $handled = $selectPage->selectPage('/player', $player_id);
+
+            return $handled;
+
+        } elseif ($method === 'GET' && $uri != '' || $method === 'POST') {
 
             $selectPage = new Router();
             $handled = $selectPage->selectPage($uri);
 
             return $handled;
 
-        }
-        else {
-            echo'Select pages';
+        } elseif ($method == '' && $uri == '') {
+
+            $selectPage = new Router();
+            $handled = $selectPage->selectPage($uri);
+
+            return $handled;
+
+        } else {
+            echo 'Navigation Error';
         }
     }
 
@@ -47,7 +66,11 @@ class Router
 
         //var_dump($uri);
 
-        switch ($uri){
+        switch ($uri) {
+            case '/':
+                $page = new Home();
+                $selectedPage = $page->getDisplay();
+                break;
             case '/home':
                 $page = new Home();
                 $selectedPage = $page->getDisplay();
@@ -73,9 +96,11 @@ class Router
                 $selectedPage = $page->getDisplay();
                 break;
             case '/contact':
-                echo "Contact Page";
-
                 $page = new Contact();
+                $selectedPage = $page->getDisplay();
+                break;
+            case '/player':
+                $page = new Player();
                 $selectedPage = $page->getDisplay();
                 break;
             default:

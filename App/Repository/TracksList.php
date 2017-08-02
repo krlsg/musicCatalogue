@@ -67,7 +67,8 @@ class TracksList
                     'title' => $row["title"],
                     'author' => $row["author"],
                     'body' => $row["body"],
-                    'date' => $row["created_at"]
+                    'date' => $row["created_at"],
+                    'youtube_link' => $row["youtube_link"],
                 );
             }
             //var_dump($listOfTracks);

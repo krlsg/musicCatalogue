@@ -5,10 +5,7 @@
  * Date: 8/2/17
  * Time: 8:45 AM
  */
-
 namespace musicCatalogue\View\Templates;
-
-
 class CategoriesTemp
 {
     public function getCategories($pageData){
@@ -22,16 +19,17 @@ class CategoriesTemp
                     <td bgcolor="red" width="25%"><b>Rock</b></td>
                     <td bgcolor="green" width="25%"><b>Classical</b></td>
                     <td bgcolor="blue" width="25%"><b>Jazz</b></td>
-                </tr>
-                <tr>
+                </tr><tr>
                 ';
-                    for($i=0; $i<4; $i++) {
-                        foreach($pageData[$i] as $value){
-                            echo '<td><a href="?track_id='.$value['track_id'].'">'.$value['track_id'].'. '.$value['title'].'</a></td>';
-                        }
-                    }
-
-                echo '</tr>
+        //var_dump($pageData);
+        for($i=0; $i<4; $i++) {
+            echo '<td valign="top">';
+            foreach($pageData[$i] as $value){
+                echo '<a href="?track_id='.$value['track_id'].'">'.$value['track_id'].'. '.$value['title'].'</a><br>';
+            }
+            echo '</td>';
+        }
+        echo '</tr>
             </div>
         ';
     }

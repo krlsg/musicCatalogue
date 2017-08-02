@@ -7,6 +7,7 @@
  */
 
 namespace musicCatalogue\Controller;
+use musicCatalogue\View\ContactView;
 
 
 class Contact
