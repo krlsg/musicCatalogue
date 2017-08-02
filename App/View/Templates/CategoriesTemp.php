@@ -22,6 +22,7 @@ class CategoriesTemp
                 </tr><tr>
                 ';
         //var_dump($pageData);
+<<<<<<< HEAD
         for($i=0; $i<4; $i++) {
             echo '<td valign="top">';
             foreach($pageData[$i] as $value){
@@ -30,6 +31,16 @@ class CategoriesTemp
             echo '</td>';
         }
         echo '</tr>
+=======
+                    for($i=0; $i<4; $i++) {
+                        echo '<td valign="top">';
+                        foreach($pageData[$i] as $value){
+                            echo '<a href="?track_id='.$value['track_id'].'">'.$value['track_id'].'. '.$value['title'].'</a><br>';
+                        }
+                        echo '</td>';
+                    }
+                echo '</tr>
+>>>>>>> 483e726eed374477f6ac988b6815ef9c944f44ad
             </div>
         ';
     }
