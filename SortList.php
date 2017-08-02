@@ -62,25 +62,6 @@ $songName = searchTitle($searchKey, $middleman);
 var_dump($songName);
 
 
-//Creating a comment in the database
-/*
-//User inputs his name; comment e.g:
-$user = "Qseo"; // User input;
-$comment = "Something new?"; // User input;
-//Need to identify song for track_id
-
-$track_id = rand(1,4);
-$sql = "INSERT INTO comments (track_id, author, body, created_at)
-VALUES ($track_id, '$user', '$comment', CURRENT_TIMESTAMP )";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-*/
-
-
 //Populatng track table with random values
 /*
     function generateRandomString($length)
@@ -109,6 +90,24 @@ VALUES ($category_id, '$title', '$body', '$author', CURRENT_TIMESTAMP )";
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
+*/
+
+//Creating a comment in the database
+/*
+//User inputs his name; comment e.g:
+$user = "Qseo"; // User input;
+$comment = "Something new?"; // User input;
+//Need to identify song for track_id
+
+$track_id = rand(1,4);
+$sql = "INSERT INTO comments (track_id, author, body, created_at)
+VALUES ($track_id, '$user', '$comment', CURRENT_TIMESTAMP )";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 */
 
 /*Putting the message in our database so we can sell it later
