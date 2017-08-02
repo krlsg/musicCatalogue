@@ -21,13 +21,11 @@ class AboutTemp
 
     <h1 align="center">About</h1>
 
-    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident,
-        sunt in culpa qui officia deserunt mollit anim id est laborum."
+    <p>"A.K.M: Amazing Kapable Men consists of Aruna Karlis and Michael. On this project, 
+        team separated the task in three parts: database structure, done by Michael, site design, 
+        created by Karlis and final mastering, executed by Aruna. When encountering problems and obstacles, 
+        the team where there for each other, which made this the best functioning site 
+        in the world. <br>"We hope you enjoy this music experience."</br>
     </p>
         ';
     }
