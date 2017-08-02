@@ -110,3 +110,24 @@ VALUES ($category_id, '$title', '$body', '$author', CURRENT_TIMESTAMP )";
         }
     }
 */
+
+/*Putting the message in our database so we can sell it later
+
+//User inputs his contacts e.g: (doesnt know about the scam)
+$name = "John";
+$surname = "Doe";
+$email = "john.doe@gmail.com";
+$phone = "2222222";
+$country = "United States";
+$message = "Your page looks nice";
+
+//This information wont be viewed >:D
+$sql = "INSERT INTO contacts (name, surname, email, phone, country, message)
+VALUES ('$name', '$surname', '$email', '$phone', '$country', '$message' )";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+*/
