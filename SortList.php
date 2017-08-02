@@ -76,7 +76,8 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+//Populatng track table with random values
+/*
     function generateRandomString($length)
     {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -103,3 +104,4 @@ VALUES ($category_id, '$title', '$body', '$author', CURRENT_TIMESTAMP )";
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
+*/

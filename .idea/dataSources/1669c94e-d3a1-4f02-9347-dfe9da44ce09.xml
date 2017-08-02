@@ -103,7 +103,12 @@
       <DataType>datetime|0</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
     </column>
-    <key id="27" parent="9" name="PRIMARY">
+    <column id="27" parent="9" name="youtube_link">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <key id="28" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>track_id</ColNames>
       <Primary>1</Primary>
