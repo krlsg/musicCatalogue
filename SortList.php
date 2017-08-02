@@ -16,7 +16,6 @@ $sql = "SELECT * FROM track";
 $result = mysqli_query($conn, $sql);
 
 $rowCount = mysqli_num_rows($result);
-echo $rowCount;
 $middleman = [];
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
@@ -25,7 +24,7 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
-var_dump($middleman);
+//var_dump($middleman);
 
 // Switch columns with rows
 foreach ($middleman as $key => $row) {
@@ -37,7 +36,7 @@ foreach ($middleman as $key => $row) {
 // Sort the data with volume descending, edition ascending
 // Add $data as the last parameter, to sort by the common key
 // Sort by 1) title 2) author 3)date
-$needSort = 1; //userInput
+$needSort = 3; //userInput
 if($needSort==1) {
         array_multisort($title, SORT_STRING, $author, SORT_STRING, $date, SORT_STRING, $middleman);
 }elseif($needSort==2){
