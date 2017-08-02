@@ -63,15 +63,43 @@ $songName = searchTitle($searchKey, $middleman);
 var_dump($songName);
 
 //User inputs his name; comment e.g:
-$user = 'Qseo'; // User input;
-$comment = 'Something to say'; // User input;
-//Need to identify song
-$track_id = 3;
+$user = "Qseo"; // User input;
+$comment = "Something new?"; // User input;
+//Need to identify song for track_id
+
+$track_id = rand(1,4);
 $sql = "INSERT INTO comments (track_id, author, body, created_at)
-VALUES ($track_id, $user, $comment, CURRENT_TIMESTAMP )";
+VALUES ($track_id, '$user', '$comment', CURRENT_TIMESTAMP )";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+    function generateRandomString($length)
+    {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
+    for ($i = 0; $i < 5; $i++) {
+        $title = generateRandomString(7);
+        $body = generateRandomString(20);
+        $author = generateRandomString(4);
+
+        $category_id = rand(1, 4);
+
+        $sql = "INSERT INTO track (category_id, title, body, author, created_at)
+VALUES ($category_id, '$title', '$body', '$author', CURRENT_TIMESTAMP )";
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
