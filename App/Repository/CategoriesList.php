@@ -31,7 +31,7 @@ class CategoriesList extends DatabaseConnection
             //var_dump($listOfTracks);
             return $listOfCategories;
         } else {
-            echo "0 results";
+            //echo "0 results";
             return $listOfCategories;
         }
     }
