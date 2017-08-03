@@ -9,22 +9,8 @@
 namespace musicCatalogue\Repository;
 
 
-class WriteComments
+class WriteComments extends DatabaseConnection
 {
-    public function __construct()
-    {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "bootcamp";
-        // Create connection
-        $this->conn = mysqli_connect($servername, $username, $password, $dbname);
-        // Check connection
-        if (!$this->conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-    }
-
     public function writeToDB($commentDetails) {
         //User inputs his contacts e.g: (doesnt know about the scam)
         $track_id = $commentDetails['track_id'];
