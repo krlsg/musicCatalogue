@@ -1,6 +1,7 @@
 ## How to Install the application
 * Clone the project
 * Create a database called "bootcamp" in mysql. (Expecting user name to be root with no password)
+* Import the database using **mcDB.sql** file.
 * Run `php composer.phar install` to install dependencies.
 * Run the local server and access.
 
