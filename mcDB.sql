@@ -53,7 +53,7 @@ CREATE TABLE `comments` (
   `track_id` int(11) DEFAULT NULL,
   `author` varchar(255) DEFAULT NULL,
   `body` blob DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,8 +64,38 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,1,'A','Good','2017-07-27 00:00:00'),(2,2,'B','Good','2017-07-27 00:00:00'),(3,3,'C','Good','2017-07-27 00:00:00'),(4,4,'D','Good','2017-07-27 00:00:00'),(5,1,'B','Bad','2017-07-27 00:00:00'),(6,2,'E','Bad','2017-07-27 00:00:00'),(7,4,'C','Bad','2017-07-27 00:00:00'),(8,5,'G','Bad','2017-07-27 00:00:00'),(9,3,'M','Good','2017-07-27 00:00:00'),(10,6,'A','Bad','2017-07-27 00:00:00');
+INSERT INTO `comments` VALUES (1,6,'A','Good','2017-08-02 13:46:03'),(2,6,'B','Good','2017-08-02 13:46:02'),(3,3,'C','Good','2017-07-26 21:00:00'),(4,4,'D','Good','2017-07-26 21:00:00'),(5,1,'B','Bad','2017-07-26 21:00:00'),(6,2,'E','Bad','2017-07-26 21:00:00'),(7,4,'C','Bad','2017-07-26 21:00:00'),(8,5,'G','Bad','2017-07-26 21:00:03'),(9,3,'M','Good','2017-07-26 21:00:02'),(10,6,'Z','Bad','2017-08-02 13:46:01');
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contacts`
+--
+
+DROP TABLE IF EXISTS `contacts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contacts` (
+  `contact_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `surname` varchar(100) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `phone` varchar(50) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`contact_id`),
+  UNIQUE KEY `contacts_contact_id_uindex` (`contact_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contacts`
+--
+
+LOCK TABLES `contacts` WRITE;
+/*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+INSERT INTO `contacts` VALUES (1,'Aruna','Wijewardana','aruna.wijewardana@gmail.com','25446534','Sri Lanka','Want to test the message.');
+/*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -106,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-02 11:28:25
+-- Dump completed on 2017-08-03 11:28:10
