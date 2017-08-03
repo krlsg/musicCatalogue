@@ -113,7 +113,7 @@ class HeaderTemp
 
 </head>
 <div class="knockout">
-    <a href="home">Amazing Kapable Men</a>
+    <a href="home">musicCatelogue</a>
 </div>
 <div class="topnav" id="myTopnav">
     <a class="blog-nav-item active" href="home">Home</a>

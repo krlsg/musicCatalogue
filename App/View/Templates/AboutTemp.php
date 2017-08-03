@@ -13,7 +13,7 @@ class AboutTemp
 {
     public function getAbout() {
         echo '
-    <div  align="center" style="overflow-y: scroll; height:400px;">
+    <div  align="center" style="overflow-y: scroll; height:500px;">
     <img src="/App/View/Templates/about.jpg" alt="Mountain View"
     style="width: 100%; height:300px;">
 

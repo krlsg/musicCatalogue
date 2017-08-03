@@ -11,7 +11,7 @@ class CategoriesTemp
     public function getCategories($pageData){
         //var_dump($pageData);
         echo '
-            <div align="center" style="overflow-y: scroll; height:400px;">
+            <div align="center" style="overflow-y: scroll; height:500px;">
                 <h1 align="center">Genres</h1>
                 <table width="70%" border="1" bordercolor="green">
                 <tr align="center">

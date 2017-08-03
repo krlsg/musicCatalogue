@@ -15,7 +15,7 @@ class PlayerTemp
     {
         //var_dump($song );
         echo '
-            <div  align="center" style="overflow-y: scroll; height:400px;">
+            <div  align="center" style="overflow-y: scroll; height:500px;">
                 <form action="" method="post">
                     <table width="100%">
                         <tr>
