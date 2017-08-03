@@ -94,7 +94,7 @@ class HeaderTemp
             right: 0;
             bottom: 0;
             left: 0;
-            padding: 10px;
+            padding: 0px;
             background-color: #4CAF50;
             text-align: center;
             font-weight: bold;

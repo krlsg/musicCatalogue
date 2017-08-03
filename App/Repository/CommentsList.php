@@ -46,7 +46,7 @@ class CommentsList
             //var_dump($listOfComments);
             return $listOfComments;
         } else {
-            echo "0 results";
+            //echo "0 results";
             return $listOfComments;
         }
 

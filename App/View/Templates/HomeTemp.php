@@ -14,13 +14,13 @@ class HomeTemp
     public function getHome($pageData) {
         echo '
         
-<div align="center" style="overflow-y: scroll; height:550px;">
+<div align="center" style="overflow-y: scroll; height:400px;">
 <div class="search">
     <h1>Search a track</h1>
 
     <div>
-        <form action="/action_page.php">
-            <input type="text" name="song" class="td2">
+        <form action="">
+            <input type="text" name="search" class="td2">
             <input type="submit" value="Search">
         </form>
     </div>

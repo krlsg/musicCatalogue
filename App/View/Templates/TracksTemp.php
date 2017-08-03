@@ -13,7 +13,7 @@ class TracksTemp
 {
     public function getTracks($pageData){
         echo '
-            <div align="center" style="overflow-y: scroll; height:550px;">
+            <div align="center" style="overflow-y: scroll; height:400px;">
                 <h1 align="center">All Tracks</h1>
                 <table width="70%" border="1" bordercolor="green">
                 <tr align="center">

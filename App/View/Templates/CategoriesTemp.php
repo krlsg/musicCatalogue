@@ -11,7 +11,7 @@ class CategoriesTemp
     public function getCategories($pageData){
         //var_dump($pageData);
         echo '
-            <div align="center" style="overflow-y: scroll; height:550px;">
+            <div align="center" style="overflow-y: scroll; height:400px;">
                 <h1 align="center">Genres</h1>
                 <table width="70%" border="1" bordercolor="green">
                 <tr align="center">
@@ -21,8 +21,6 @@ class CategoriesTemp
                     <td bgcolor="blue" width="25%"><b>Jazz</b></td>
                 </tr><tr>
                 ';
-        //var_dump($pageData);
-<<<<<<< HEAD
         for($i=0; $i<4; $i++) {
             echo '<td valign="top">';
             foreach($pageData[$i] as $value){
@@ -31,16 +29,6 @@ class CategoriesTemp
             echo '</td>';
         }
         echo '</tr>
-=======
-                    for($i=0; $i<4; $i++) {
-                        echo '<td valign="top">';
-                        foreach($pageData[$i] as $value){
-                            echo '<a href="?track_id='.$value['track_id'].'">'.$value['track_id'].'. '.$value['title'].'</a><br>';
-                        }
-                        echo '</td>';
-                    }
-                echo '</tr>
->>>>>>> 483e726eed374477f6ac988b6815ef9c944f44ad
             </div>
         ';
     }
