@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/2/17
- * Time: 3:53 PM
- */
 
 namespace musicCatalogue\Repository;
-
 
 class CommentsList extends DatabaseConnection
 {

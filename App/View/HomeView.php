@@ -6,10 +6,10 @@ use musicCatalogue\View\Templates\HeaderTemp;
 use musicCatalogue\View\Templates\HomeTemp;
 use musicCatalogue\View\Templates\FooterTemp;
 
-
 class HomeView
 {
-    public function render($pageData){
+    public function render($pageData)
+    {
 
         $headerTemp = new HeaderTemp();
         $header = $headerTemp->getHeader();

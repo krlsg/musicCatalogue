@@ -1,19 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/2/17
- * Time: 11:52 AM
- */
 
 namespace musicCatalogue\View\Templates;
 
-
 class ContactTemp
 {
- public function getContact() {
-     echo '
-        <div align="center" style="overflow-y: scroll; height:500px;">
+    public function getContact()
+    {
+        echo '
+        <div align="center" style="overflow-y: scroll; height:600px;">
             <h1 align="center">Contacts</h1>
         <table width = 40% height = 30% align ="left" border="1" bordercolor="#4CAF50">
         <tr>
@@ -61,5 +55,5 @@ class ContactTemp
         </div>
         
      ';
- }
+    }
 }

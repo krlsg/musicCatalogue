@@ -1,19 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/2/17
- * Time: 11:02 AM
- */
 
 namespace musicCatalogue\View\Templates;
 
-
 class AboutTemp
 {
-    public function getAbout() {
+    public function getAbout()
+    {
         echo '
-    <div  align="center" style="overflow-y: scroll; height:500px;">
+    <div  align="center" style="overflow-y: scroll; height:600px;">
     <img src="/App/View/Templates/about.jpg" alt="Mountain View"
     style="width: 100%; height:300px;">
 

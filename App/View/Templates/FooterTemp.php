@@ -1,17 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/2/17
- * Time: 12:54 AM
- */
 
 namespace musicCatalogue\View\Templates;
 
-
 class FooterTemp
 {
-    public function getFooter() {
+    public function getFooter()
+    {
         echo '
         
 <footer>

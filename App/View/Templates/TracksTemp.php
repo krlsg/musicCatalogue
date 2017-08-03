@@ -1,19 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/2/17
- * Time: 10:36 AM
- */
 
 namespace musicCatalogue\View\Templates;
 
-
 class TracksTemp
 {
-    public function getTracks($pageData){
+    public function getTracks($pageData)
+    {
         echo '
-            <div align="center" style="overflow-y: scroll; height:500px;">
+            <div align="center" style="overflow-y: scroll; height:600px;">
                 <h1 align="center">All Tracks</h1>
                 <table width="70%" border="1" bordercolor="green">
                 <tr align="center">
@@ -24,11 +18,11 @@ class TracksTemp
                 </tr>
                 
                 ';
-                        foreach($pageData as $value){
-                            echo '<tr><td><a href="?track_id='.$value['track_id'].'">'.$value['track_id'].'</a></td><td><a href="?track_id='.$value['track_id'].'">'.$value['title'].'</a></td><td><a href="?track_id='.$value['track_id'].'">'.$value['author'].'</a></td><td><a href="?track_id='.$value['track_id'].'">'.$value['body'].'</a></td></tr>';
-                        }
+        foreach ($pageData as $value) {
+            echo '<tr><td><a href="?track_id=' . $value['track_id'] . '">' . $value['track_id'] . '</a></td><td><a href="?track_id=' . $value['track_id'] . '">' . $value['title'] . '</a></td><td><a href="?track_id=' . $value['track_id'] . '">' . $value['author'] . '</a></td><td><a href="?track_id=' . $value['track_id'] . '">' . $value['body'] . '</a></td></tr>';
+        }
 
-                echo '
+        echo '
             </div>
         ';
     }

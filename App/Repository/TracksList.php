@@ -1,19 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/1/17
- * Time: 10:19 PM
- */
 
 namespace musicCatalogue\Repository;
 
-
 class TracksList extends DatabaseConnection
 {
-    public function getListOfTracks($type){
-
-        switch ($type){
+    public function getListOfTracks($type)
+    {
+        switch ($type) {
             case 'catD1':
                 $sql = "SELECT * FROM track WHERE category_id = 1 ORDER BY created_at DESC";
                 break;
@@ -47,7 +40,7 @@ class TracksList extends DatabaseConnection
         //echo $rowCount;
         $listOfTracks = [];
         if (mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
                 $listOfTracks[] = array(
                     'track_id' => $row["track_id"],
                     'title' => $row["title"],

@@ -1,19 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/1/17
- * Time: 11:46 AM
- */
 
 namespace musicCatalogue\Controller;
+
 use musicCatalogue\Model\HomeModel;
 use musicCatalogue\View\HomeView;
 
 
 class Home
 {
-    public function getDisplay(){
+    public function getDisplay()
+    {
 
         $model = new HomeModel();
         $pageData = $model->getPageData();

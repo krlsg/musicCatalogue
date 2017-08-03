@@ -1,17 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/2/17
- * Time: 8:45 AM
- */
+
 namespace musicCatalogue\View\Templates;
+
 class CategoriesTemp
 {
-    public function getCategories($pageData){
+    public function getCategories($pageData)
+    {
         //var_dump($pageData);
         echo '
-            <div align="center" style="overflow-y: scroll; height:500px;">
+            <div align="center" style="overflow-y: scroll; height:600px;">
                 <h1 align="center">Genres</h1>
                 <table width="70%" border="1" bordercolor="green">
                 <tr align="center">
@@ -21,10 +18,10 @@ class CategoriesTemp
                     <td bgcolor="blue" width="25%"><b>Jazz</b></td>
                 </tr><tr>
                 ';
-        for($i=0; $i<4; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             echo '<td valign="top">';
-            foreach($pageData[$i] as $value){
-                echo '<a href="?track_id='.$value['track_id'].'">'.$value['track_id'].'. '.$value['title'].'</a><br>';
+            foreach ($pageData[$i] as $value) {
+                echo '<a href="?track_id=' . $value['track_id'] . '">' . $value['track_id'] . '. ' . $value['title'] . '</a><br>';
             }
             echo '</td>';
         }

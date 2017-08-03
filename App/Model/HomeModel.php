@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/1/17
- * Time: 11:48 PM
- */
 
 namespace musicCatalogue\Model;
 
@@ -13,7 +7,8 @@ use musicCatalogue\Repository\TracksList;
 
 class HomeModel
 {
-    public function getPageData(){
+    public function getPageData()
+    {
         $tracks = new TracksList();
 
         $list1 = $tracks->getListOfTracks('catD1');

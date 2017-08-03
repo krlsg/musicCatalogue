@@ -1,18 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/2/17
- * Time: 8:26 AM
- */
 
 namespace musicCatalogue\Repository;
 
-
 class CategoriesList extends DatabaseConnection
 {
-    public function getListOfCategories(){
-
+    public function getListOfCategories()
+    {
         $sql = "SELECT * FROM categories";
 
         $result = mysqli_query($this->conn, $sql);
@@ -20,7 +13,7 @@ class CategoriesList extends DatabaseConnection
         //echo $rowCount;
         $listOfCategories = [];
         if (mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
                 $listOfTracks[] = array(
                     'category_id' => $row["category_id"],
                     'title' => $row["title"],

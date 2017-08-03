@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: student
- * Date: 8/3/17
- * Time: 10:35 AM
- */
 
 namespace musicCatalogue\Repository;
-
 
 class DatabaseConnection
 {
